@@ -14,6 +14,18 @@ isComponent: true
   "t-indexes": "tdesign-miniprogram/indexes/indexes"
 }
 ```
+### 主题定制
+CSS 变量名|说明
+--|--
+--t-indexes-title-color | 索引标题颜色;
+--t-indexes-title-bg-color | 索引标题背景颜色;
+--t-indexes-children-text-color | 索引内容文本颜色;
+--t-indexes-children-bg-color | 索引内容背景颜色;
+--t-indexes-index-text-color | 索引文本颜色;
+--t-indexes-index-text-active-color | 索引文本激活态颜色;
+--t-indexes-index-bg-color | 索引背景颜色;
+--t-indexes-tips-text-color | 索引提示信息颜色;
+--t-indexes-tips-bg-color | 索引提示信息颜色;
 
 ## 代码演示
 

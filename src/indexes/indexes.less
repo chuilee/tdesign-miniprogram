@@ -1,3 +1,5 @@
+@import '../common/style/index.less';
+
 @font-size: 32rpx;
 @color: #000;
 
@@ -9,21 +11,36 @@
 
 @primary-color: #0071ce;
 
-@background-color: #f8f8f8;
 @front-background-color: white;
 
 @active-color: #0052d9;
 @active-font-size: 32rpx;
 @active-line-height: 56rpx;
 
-.t-indexes {
-  background-color: @background-color;
+page {
+  --t-indexes-title-color: @text-level-3-color;
+  --t-indexes-title-bg-color: @bg-color-fade;
+  --t-indexes-children-text-color: @color;
+  --t-indexes-children-bg-color: @front-background-color;
+  --t-indexes-index-text-color: @hint-color;
+  --t-indexes-index-text-active-color: @active-color;
+  --t-indexes-index-bg-color: @front-background-color;
+  --t-indexes-tips-text-color: @front-background-color;
+  --t-indexes-tips-bg-color: @active-color;
+}
+
+.@{prefix}-indexes {
   position: relative;
+
+  &__title {
+    color: var(--t-indexes-title-color);
+    background-color: var(--t-indexes-title-bg-color);
+  }
 
   &__row {
     font-size: @font-size;
-    color: @color;
-    background-color: @front-background-color;
+    color: var(--t-indexes-children-text-color);
+    background-color: var(--t-indexes-children-bg-color);
     height: @cell-height;
     display: flex;
     align-items: center;
@@ -40,7 +57,8 @@
     right: 0;
     width: 100rpx;
     font-size: 24rpx;
-    color: @hint-color;
+    color: var(--t-indexes-index-text-color);
+    background-color: var(--t-indexes-index-bg-color);
     font-size: @hint-font-size;
     line-height: @hint-line-height;
     text-align: center;
@@ -63,7 +81,7 @@
     position: relative;
 
     &.is-actived {
-      color: @active-color;
+      color: var(--t-indexes-index-text-active-color);
       font-size: @active-font-size;
       line-height: @active-line-height;
     }
@@ -77,8 +95,8 @@
     vertical-align: middle;
     font-size: 40rpx;
     font-weight: 700;
-    color: white;
-    background-color: @active-color;
+    color: var(--t-indexes-tips-text-color);
+    background-color: var(--t-indexes-tips-bg-color);
     border-radius: 40rpx 40rpx 0;
     position: absolute;
     top: 0;
